@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div>
+      <h1><%= title %></h1>
+      <ul>
+        <% for (const msg of messages) { %>
+        <li>
+          <h4><%= msg.user %></h4>
+          <p><%= msg.text %></p>
+          <p><%= msg.added %></p>
+        </li>
+        <% } %>
+      </ul>
+      <a href="/new">
+        <button>Add new message</button>
+      </a>
+    </div>
+  </body>
+</html>
