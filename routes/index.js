@@ -26,10 +26,6 @@ router.post('/new', function (req, res, next) {
   const author = req.body.name
   const message = req.body.message
 
-  if (!author || !message) {
-    return res.status(400).send("Name and message are required");
-  }
-
   messages.push({ text: message, user: author, added: new Date() });
 
   res.redirect('/')

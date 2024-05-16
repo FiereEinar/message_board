@@ -4,25 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <a href="/">Go back</a>
-    <form method="POST" action="/new">
-      <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Name" required />
-      </div>
-      <div>
-        <label for="message">Message</label>
-        <input
-          type="text"
-          id="message"
-          name="message"
-          placeholder="Message"
-          required
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="formWrapper">
+      <header>
+        <a href="/" class="goback">Go back</a>
+      </header>
+      <form method="POST" action="/new">
+        <div class="inputField">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jhone Doe"
+            required
+          />
+        </div>
+        <div class="inputField">
+          <label for="message">Message</label>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Input message here"
+            required
+          />
+        </div>
+        <div class="submitContainer">
+          <button type="submit" class="newButton"><h4>Submit</h4></button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
